@@ -36,6 +36,6 @@ while true; do
     exit 0
   fi
   echo "Warnings present. Starting Cursor agent to fix one (process/fix-warning.md)."
-  $AGENT_CMD -p -f --workspace "$SCRIPT_DIR" "$PROMPT"
+  $AGENT_CMD -p --workspace "$SCRIPT_DIR" "$PROMPT"
   echo "Agent finished. Re-checking for warnings..."
 done
