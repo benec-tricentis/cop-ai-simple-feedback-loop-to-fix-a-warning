@@ -85,6 +85,24 @@ git checkout -b fix/<warning-code>-<short-descriptor>
 - Create a pull request targeting the default branch (e.g. `main`).
 - PR title and description should state that this PR fixes **one** specific warning (include warning code and file/location if helpful).
 
+### 6. Check out main and merge the branch locally
+
+After the PR is created:
+
+1. **Check out the default branch** (e.g. `main`):
+
+   ```bash
+   git checkout main
+   ```
+
+2. **Merge the fix branch locally**:
+
+   ```bash
+   git merge <branch-name>
+   ```
+
+You will then be on `main` with the fix merged locally (the PR can still be used for review/CI; the local merge keeps your main in sync with the fix).
+
 ## Constraints (summary)
 
 - One warning per run; one branch per warning; one PR per branch.
